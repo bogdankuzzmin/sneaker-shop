@@ -1,0 +1,32 @@
+@import "src/theme/variables";
+
+.Item {
+  display: flex;
+  flex-direction: column;
+  padding: $inner-gap;
+  height: 256px;
+  max-height: 256px;
+  width: 198px;
+  transition: background $transition-time linear;
+
+  &:hover {
+    background-color: $primary-white;
+    border-radius: $border-radius-big;
+    cursor: pointer;
+
+    .Image {
+      transform: scale(1.1) rotate(-1deg);
+    }
+  }
+}
+
+.Image {
+  margin-bottom: $border-radius-big;
+  height: 120px;
+  transition: transform 0.2s linear;
+}
+
+.Price {
+  margin-top: auto;
+  font-family: $family-primary-bold;
+}

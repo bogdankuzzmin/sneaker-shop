@@ -1,5 +1,6 @@
 $transition-time: 0.15s;
 $border-radius: 4px;
+$border-radius-big: 8px;
 
 //colors
 $primary-dark-brown: #3d261c;
@@ -18,13 +19,16 @@ $family-title: 'Unbounded', 'Arial', sans-serif;
 $family-primary-bold: 'Sora Bold', 'Arial', sans-serif;
 $family-primary-regular: 'Sora Regular', 'Arial', sans-serif;
 
-$small-size: 12px;
-$primary-size: 14px;
-$title-size: 32px;
+$font-small-size: 12px;
+$font-size-base: 14px;
+$font-size-large: 16px;
+$font-size-title-small: 28px;
+$font-size-title: 32px;
 
 $weight-medium: 600;
 $weight-regular: 400;
 
 //gaps
-$block-gap: 20px;
+$outer-gap: 28px;
+$inner-gap: 20px;
 $item-gap: 12px;

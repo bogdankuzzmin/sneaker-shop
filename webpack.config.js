@@ -111,6 +111,8 @@ module.exports = {
   resolve: {
     alias: {
       '@assets': path.resolve(__dirname, 'src/assets'),
+      '@icons': path.resolve(__dirname, 'src/assets/icons'),
+      '@images': path.resolve(__dirname, 'src/assets/images'),
       '@api': path.resolve(__dirname, 'src/api'),
       '@components': path.resolve(__dirname, 'src/components'),
       '@hooks': path.resolve(__dirname, 'src/hooks'),
