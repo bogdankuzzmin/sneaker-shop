@@ -5,8 +5,8 @@ $button-submit-gradient: linear-gradient(
   45deg,
   transparent 0%,
   transparent 2%,
-  $primary-dark 2%,
-  $primary-dark 98%,
+  $primary-dark-brown 2%,
+  $primary-dark-brown 98%,
   transparent 98%,
   transparent 100%
 );
@@ -16,10 +16,10 @@ $button-submit-gradient: linear-gradient(
 
   position: relative;
   padding: 13px 45px;
-  font-family: $family-sora-bold;
+  font-family: $family-primary-bold;
   color: $primary-white;
   font-weight: $weight-medium;
-  background-color: $primary-dark-gray;
+  background-color: $primary-gray;
   border: none;
   border-radius: $border-radius;
   transition-property: background-color, color, border-color;
@@ -29,18 +29,18 @@ $button-submit-gradient: linear-gradient(
 
   &:not(:disabled):hover,
   &:not(:disabled):focus {
-    color: $primary-semi-gray;
-    background-color: $primary-dark;
+    color: $primary-light-brown;
+    background-color: $primary-dark-brown;
   }
 
   &Secondary {
-    color: $primary-dark;
+    color: $primary-dark-brown;
     background-color: $primary-white;
     border: 1px solid $primary-light-gray;
   }
 
   &Submit {
-    color: $button-color;
+    color: $primary-pearl-white;
     background: $button-submit-gradient;
     border-radius: 0;
 
