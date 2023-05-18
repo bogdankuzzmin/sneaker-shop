@@ -5,11 +5,11 @@
 }
 
 .Form {
-  margin-bottom: $block-gap;
+  margin-bottom: $inner-gap;
 }
 
 .InputWrapper {
-  margin-bottom: $block-gap;
+  margin-bottom: $inner-gap;
 }
 
 .Input {
@@ -19,12 +19,12 @@
 .AdditionalLogin {
   &Title {
     position: relative;
-    margin: 0 0 $block-gap;
+    margin: 0 0 $inner-gap;
     color: $primary-gray;
     text-align: center;
 
     span {
-      padding: 0 $block-gap;
+      padding: 0 $inner-gap;
       font-size: $small-size;
       font-weight: $weight-regular;
       text-transform: uppercase;
