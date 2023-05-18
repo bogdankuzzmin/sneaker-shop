@@ -1,0 +1,71 @@
+@import "src/theme/variables";
+
+$padding: 12px;
+$iconPadding: 40px;
+
+.Input {
+  padding: $padding;
+  width: 100%;
+  background-color: $primary-white;
+  border: 1px solid $primary-gray;
+  border-radius: $border-radius;
+
+  &LeftPadding {
+    padding-left: $iconPadding;
+  }
+
+  &RightPadding {
+    padding-right: $iconPadding;
+  }
+}
+
+.InputWrapper {
+  position: relative;
+}
+
+.Icon {
+  position: absolute;
+  top: 50%;
+  margin-top: -10px;
+
+  &Left {
+    left: $padding;
+  }
+
+  &Right {
+    right: $padding;
+  }
+}
+
+.PasswordButton {
+  position: absolute;
+  top: 50%;
+  margin-top: -10px;
+  right: $padding;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  svg {
+    path, circle {
+      transition: $transition-time linear;
+    }
+  }
+
+  &ShowPassword {
+    svg {
+      path, circle {
+        stroke: $primary-dark-brown;
+      }
+    }
+  }
+
+  &:hover {
+    svg {
+      path, circle {
+        stroke: $primary-dark-brown;
+      }
+    }
+  }
+}
