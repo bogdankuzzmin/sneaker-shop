@@ -26,7 +26,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'src', 'index.html')
+      template: path.resolve(__dirname, 'public', 'index.html')
     }),
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css',
@@ -88,15 +88,18 @@ module.exports = {
         type: 'asset/resource',
       },
       {
-        test: /\.m?js$/i,
+        test: /\.(js|jsx|tsx|ts)$/,
         exclude: /(node_modules|bower_components)/,
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env'],
+            presets: ['@babel/preset-env', '@babel/preset-react'],
           },
         },
       },
     ]
+  },
+  resolve: {
+    extensions: ['.js', '.jsx']
   }
 }
