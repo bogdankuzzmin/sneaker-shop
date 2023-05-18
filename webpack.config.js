@@ -93,13 +93,22 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env', '@babel/preset-react'],
+            presets: ['@babel/preset-env', '@babel/preset-react', '@babel/preset-typescript'],
           },
         },
       },
     ]
   },
   resolve: {
-    extensions: ['.js', '.jsx']
+    alias: {
+      '@api': path.resolve(__dirname, 'src/api'),
+      '@components': path.resolve(__dirname, 'src/components'),
+      '@hooks': path.resolve(__dirname, 'src/hooks'),
+      '@pages': path.resolve(__dirname, 'src/pages'),
+      '@store': path.resolve(__dirname, 'src/store'),
+      '@utils': path.resolve(__dirname, 'src/utils'),
+      '@': path.resolve(__dirname, 'src'),
+    },
+    extensions: ['.ts', '.tsx', '.js', '.jsx', '.css', '.scss', '.sass']
   }
 }
