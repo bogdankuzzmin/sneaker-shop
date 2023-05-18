@@ -1,0 +1,51 @@
+@import "src/theme/variables";
+
+.Login {
+  width: 432px;
+}
+
+.Form {
+  margin-bottom: $block-gap;
+}
+
+.InputWrapper {
+  margin-bottom: $block-gap;
+}
+
+.Input {
+  margin-bottom: $item-gap;
+}
+
+.AdditionalLogin {
+  &Title {
+    position: relative;
+    margin: 0 0 $block-gap;
+    color: $primary-gray;
+    text-align: center;
+
+    span {
+      padding: 0 $block-gap;
+      font-size: $small-size;
+      font-weight: $weight-regular;
+      text-transform: uppercase;
+      background-color: $main-background;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      z-index: -10;
+      height: 1px;
+      width: 100%;
+      background-color: $primary-timber-wolf;
+    }
+  }
+
+  &ButtonWrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
