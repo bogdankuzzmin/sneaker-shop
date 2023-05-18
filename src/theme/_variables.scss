@@ -9,10 +9,11 @@ $primary-light-gray: #c5bebb;
 $primary-pearl-whiter: #f6f3ef;
 $primary-pearl-white: #ede7de;
 $primary-white: #ffffff;
+$primary-timber-wolf: #d8d4d2;
 
 $main-background: $primary-pearl-whiter;
 
-//font
+//fonts
 $family-title: 'Unbounded', 'Arial', sans-serif;
 $family-primary-bold: 'Sora Bold', 'Arial', sans-serif;
 $family-primary-regular: 'Sora Regular', 'Arial', sans-serif;
@@ -23,3 +24,7 @@ $title-size: 32px;
 
 $weight-medium: 600;
 $weight-regular: 400;
+
+//gaps
+$block-gap: 20px;
+$item-gap: 12px;
