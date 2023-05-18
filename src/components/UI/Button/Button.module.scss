@@ -1,0 +1,61 @@
+@import "src/theme/variables";
+@import "src/theme/mixins";
+
+$button-submit-gradient: linear-gradient(
+  45deg,
+  transparent 0%,
+  transparent 2%,
+  $primary-dark-brown 2%,
+  $primary-dark-brown 98%,
+  transparent 98%,
+  transparent 100%
+);
+
+.Button {
+  @include flexCenter;
+
+  position: relative;
+  padding: 13px 45px;
+  font-family: $family-primary-bold;
+  color: $primary-white;
+  font-weight: $weight-medium;
+  background-color: $primary-gray;
+  border: none;
+  border-radius: $border-radius;
+  transition-property: background-color, color, border-color;
+  transition-duration: $transition-time;
+  transition-timing-function: linear;
+  cursor: pointer;
+
+  &:not(:disabled):hover,
+  &:not(:disabled):focus {
+    color: $primary-light-brown;
+    background-color: $primary-dark-brown;
+  }
+
+  &Secondary {
+    color: $primary-dark-brown;
+    background-color: $primary-white;
+    border: 1px solid $primary-light-gray;
+  }
+
+  &Submit {
+    color: $primary-pearl-white;
+    background: $button-submit-gradient;
+    border-radius: 0;
+
+    &:not(:disabled):hover,
+    &:not(:disabled):focus {
+      background: $button-submit-gradient;
+    }
+  }
+
+  &FullWidth {
+    width: 100%;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}

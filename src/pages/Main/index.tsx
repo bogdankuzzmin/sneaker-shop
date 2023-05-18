@@ -1,10 +1,13 @@
 import React, { FC } from 'react';
+import Login from '@pages/Login';
+
+import classes from './Main.modules.scss';
 
 const Main: FC = () => {
   return (
-    <div>
-      <h1>Sneaker Shop</h1>
-    </div>
+      <>
+        <Login />
+      </>
   );
 };
 

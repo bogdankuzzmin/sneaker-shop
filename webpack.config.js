@@ -64,7 +64,7 @@ module.exports = {
         type: 'asset/resource',
       },
       {
-        test: /\.(jpe?g|png|webp|gif|svg)$/i,
+        test: /\.(jpe?g|png|webp|gif)$/i,
         use: devMode
           ? []
           : [
@@ -93,6 +93,10 @@ module.exports = {
         type: 'asset/resource',
       },
       {
+        test: /\.svg$/,
+        use: ['@svgr/webpack'],
+      },
+      {
         test: /\.(js|jsx|tsx|ts)$/,
         exclude: /(node_modules|bower_components)/,
         use: {
@@ -106,11 +110,13 @@ module.exports = {
   },
   resolve: {
     alias: {
+      '@assets': path.resolve(__dirname, 'src/assets'),
       '@api': path.resolve(__dirname, 'src/api'),
       '@components': path.resolve(__dirname, 'src/components'),
       '@hooks': path.resolve(__dirname, 'src/hooks'),
       '@pages': path.resolve(__dirname, 'src/pages'),
       '@store': path.resolve(__dirname, 'src/store'),
+      '@theme': path.resolve(__dirname, 'src/theme'),
       '@utils': path.resolve(__dirname, 'src/utils'),
       '@': path.resolve(__dirname, 'src'),
     },
