@@ -1,4 +1,5 @@
-import React, { FC, MouseEvent, useCallback, useState } from 'react';
+import React, { ChangeEvent, FC, MouseEvent, useCallback, useState } from 'react';
+import cn from 'classnames';
 
 import Layout from '@components/Layout';
 import Input from '@components/UI/Input';
@@ -31,19 +32,17 @@ const Login: FC = () => {
     console.log('SUBMIT!');
   }, []);
 
-  const changeInputHandler = (event: any) => {
-    setFormData((prevState: any) => ({
+  const changeInputHandler = (event: ChangeEvent<HTMLInputElement>) => {
+    setFormData((prevState) => ({
       ...prevState,
       [event.target.id]: event.target.value,
     }));
   }
 
-  console.log(formData)
-
   return (
     <Layout variant="Center">
       <div className={classes.Login}>
-        <h2 className="title">Accedi</h2>
+        <h2 className={cn(classes.Title, 'title')}>Accedi</h2>
 
         <form className={classes.Form} autoComplete="off">
           <div className={classes.InputWrapper}>
