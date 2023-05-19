@@ -1,0 +1,13 @@
+@import "src/theme/variables";
+
+$hover-color: lighten($primary-dark-brown, 20%);
+
+.Link {
+  color: $primary-dark-brown;
+  font-family: $family-primary-bold;
+  transition: color $transition-time linear;
+
+  &:hover, &:focus-visible {
+    color: $hover-color;
+  }
+}

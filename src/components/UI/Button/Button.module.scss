@@ -28,7 +28,7 @@ $button-submit-gradient: linear-gradient(
   cursor: pointer;
 
   &:not(:disabled):hover,
-  &:not(:disabled):focus {
+  &:not(:disabled):focus-visible {
     color: $primary-light-brown;
     background-color: $primary-dark-brown;
   }
@@ -37,6 +37,11 @@ $button-submit-gradient: linear-gradient(
     color: $primary-dark-brown;
     background-color: $primary-white;
     border: 1px solid $primary-light-gray;
+
+    &:not(:disabled):hover,
+    &:not(:disabled):focus-visible {
+      color: $primary-white;
+    }
   }
 
   &Submit {
@@ -45,7 +50,7 @@ $button-submit-gradient: linear-gradient(
     border-radius: 0;
 
     &:not(:disabled):hover,
-    &:not(:disabled):focus {
+    &:not(:disabled):focus-visible {
       background: $button-submit-gradient;
     }
   }

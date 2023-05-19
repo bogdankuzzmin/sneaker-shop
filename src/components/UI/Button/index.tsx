@@ -5,6 +5,7 @@ import classes from './Button.module.scss';
 
 interface IButtonProps {
   children: ReactNode;
+  className?: string;
   fullWidth?: boolean;
   variant?: 'Secondary' | 'Submit';
 }
@@ -13,6 +14,7 @@ export type TNativeButtonProps = IButtonProps & ButtonHTMLAttributes<HTMLButtonE
 
 const Button: FC<TNativeButtonProps> = ({
   children,
+  className,
   fullWidth,
   variant,
   ...rest
@@ -20,6 +22,7 @@ const Button: FC<TNativeButtonProps> = ({
   return <button
     className={cn(
     classes.Button,
+    className,
     {
       [classes.ButtonFullWidth]: fullWidth,
       [classes[`Button${variant}`]] :variant,
