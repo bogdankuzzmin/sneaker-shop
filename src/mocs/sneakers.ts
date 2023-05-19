@@ -28,6 +28,77 @@ export const SNEAKERS = [
     image: 'sneakers6',
     title: 'Nike Title 1',
     price: '355',
+    sizes: [
+      {
+        size: '35.5',
+        price: 188,
+        isInStock: true,
+      },
+      {
+        size: '36',
+        price: 189,
+        isInStock: true,
+      },
+      {
+        size: '36.5',
+        price: 206,
+        isInStock: false,
+      },
+      {
+        size: '37',
+        price: 203,
+        isInStock: true,
+      },
+      {
+        size: '37.5',
+        price: 203,
+        isInStock: true,
+      },
+      {
+        size: '38',
+        price: 210,
+        isInStock: false,
+      },
+      {
+        size: '38.5',
+        price: 211,
+        isInStock: false,
+      },
+      {
+        size: '39',
+        price: 199,
+        isInStock: true,
+      },
+      {
+        size: '40',
+        price: 198,
+        isInStock: true,
+      },
+      {
+        size: '40.5',
+        price: 203,
+        isInStock: true,
+      },
+      {
+        size: '41',
+        price: 203,
+        isInStock: true,
+      },
+      {
+        size: '42',
+        price: 203,
+        isInStock: true,
+      },{
+        size: '42.5',
+        price: 225,
+        isInStock: true,
+      },{
+        size: '43',
+        price: 213,
+        isInStock: true,
+      },
+
+    ],
   },
   {
     image: 'sneakers7',
