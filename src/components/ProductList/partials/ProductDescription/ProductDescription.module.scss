@@ -1,0 +1,80 @@
+@import "src/theme/variables";
+
+.ProductDescription {
+  display: flex;
+
+  .ButtonWrapper {
+    display: grid;
+    grid-template-columns: 91px 91px 91px 91px;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .Button {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 19px;
+    height: 56px;
+    width: 91px;
+    font-size: $font-small-size;
+    line-height: 1.4;
+
+    &:not(:disabled):hover .Price,
+    &:not(:disabled):focus-visible .Price {
+      color: $primary-light-brown;
+    }
+  }
+
+  .Price {
+    color: $primary-gray;
+    font-size: $font-size-base;
+  }
+}
+
+.LeftColumn {
+  height: 540px;
+  max-height: 540px;
+  min-width: 660px;
+  margin-right: 40px;
+  border: 1px solid $primary-timber-wolf;
+  border-radius: 12px;
+
+  img {
+    transition: transform $transition-time linear;
+
+    &:hover {
+      transform: scale(1.1) rotate(-1deg);
+    }
+  }
+}
+
+.Info {
+  display: flex;
+  margin-bottom: 15px;
+
+  &LeftColumn {
+    flex-basis: 50%;
+  }
+
+  &RightColumn {
+    flex-basis: 50%;
+  }
+
+  .InfoColumnBlock {
+    margin-bottom: 15px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &Title {
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: #C5BEBB;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+}
+
