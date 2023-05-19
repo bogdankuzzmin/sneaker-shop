@@ -1,0 +1,32 @@
+@import "src/theme/variables";
+@import "src/theme/animations";
+
+.Collapse {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Content {
+  margin-top: 15px;
+}
+
+.Title {
+  margin: 0;
+  font-size: $font-size-base;
+  font-weight: $weight-regular;
+}
+
+.Button {
+  align-self: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.Icon {
+  animation: scale-disappear-back 0.5s forwards;
+}
+
+.IconTransform {
+  animation: scale-disappear 0.5s forwards;
+}
