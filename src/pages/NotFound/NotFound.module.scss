@@ -1,0 +1,13 @@
+@import "src/theme/variables";
+
+.NotFound {
+  text-align: center;
+
+  .Title {
+    font-size: $font-size-big;
+  }
+
+  .Link {
+    font-size: $font-size-large;
+  }
+}
