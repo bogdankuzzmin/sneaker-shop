@@ -16,7 +16,7 @@ const Collapse: FC<ICollapseProps> = ({ children, title }) => {
   const toggleCollapseHandler = () => setIsCollapseOpen((prevState) => !prevState);
 
   return (
-    <div>
+    <>
       <div className={classes.Collapse}>
         <h3 className={classes.Title}>{title}</h3>
 
@@ -25,8 +25,8 @@ const Collapse: FC<ICollapseProps> = ({ children, title }) => {
         </button>
       </div>
 
-      {isCollapseOpen && <div className={classes.Content}>{children}</div>}
-    </div>
+      {isCollapseOpen && <div className={cn(classes.Content)}>{children}</div>}
+    </>
   );
 };
 

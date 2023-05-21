@@ -3,6 +3,7 @@
 .List {
   @include clearList;
   display: flex;
+  margin-bottom: $inner-gap;
 }
 
 .Item {

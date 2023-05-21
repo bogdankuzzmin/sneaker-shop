@@ -1,4 +1,5 @@
 export enum Paths {
   root = '/',
-  products = '/products',
+  esplora = '/esplora',
 }
+

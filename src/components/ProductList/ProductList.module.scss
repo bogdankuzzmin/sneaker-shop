@@ -1,5 +1,8 @@
+@import "src/theme/utils";
+
 .List {
+  @include clearList;
   display: grid;
-  grid-template-columns: 198px 198px 198px 198px 198px;
+  grid-template-columns: repeat(5, 1fr);
   gap: 28px;
 }

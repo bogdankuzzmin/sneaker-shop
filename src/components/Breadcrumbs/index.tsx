@@ -3,9 +3,9 @@ import { useLocation } from 'react-router';
 
 import { Link } from 'react-router-dom';
 import { capitalizeFirstLetter } from '@utils/string/capitalizeFirstLetter';
+import { Paths } from '@utils/constants/routes';
 
 import classes from './Breadcrumbs.module.scss';
-import { Paths } from '@utils/constants/routes';
 
 const Breadcrumbs: FC = () => {
   const location = useLocation();
@@ -15,7 +15,7 @@ const Breadcrumbs: FC = () => {
 
   const crumbs = pathnames
     .map((crumb, index) => {
-      const crumbName = capitalizeFirstLetter(crumb).split('-').join(' ');
+      const crumbName = crumb.split('-').map((item) => capitalizeFirstLetter(item)).join(' ');
       currentLink += `/${crumb}`;
 
       return (

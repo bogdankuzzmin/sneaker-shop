@@ -5,8 +5,8 @@
 
   .ButtonWrapper {
     display: grid;
-    grid-template-columns: 91px 91px 91px 91px;
-    gap: 12px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: $item-gap;
     flex-wrap: wrap;
   }
 
@@ -37,7 +37,7 @@
   min-width: 660px;
   margin-right: 40px;
   border: 1px solid $primary-timber-wolf;
-  border-radius: 12px;
+  border-radius: $border-radius-enormous;
 
   img {
     transition: transform $transition-time linear;
@@ -49,31 +49,22 @@
 }
 
 .Info {
-  display: flex;
-  margin-bottom: 15px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr 1fr auto;
+  grid-column-gap: 20px;
+  grid-row-gap: 16px;
 
-  &LeftColumn {
-    flex-basis: 50%;
-  }
-
-  &RightColumn {
-    flex-basis: 50%;
-  }
-
-  .InfoColumnBlock {
-    margin-bottom: 15px;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
+  &FullWidth {
+    grid-column: 1 / span 2;
   }
 
   &Title {
     margin-top: 0;
     margin-bottom: 5px;
-    color: #C5BEBB;
-    font-size: 12px;
-    font-weight: 600;
+    color: $primary-light-gray;
+    font-size: $font-small-size;
+    font-weight: $weight-medium;
     text-transform: uppercase;
   }
 }
