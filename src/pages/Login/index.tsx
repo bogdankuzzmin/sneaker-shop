@@ -40,9 +40,9 @@ const Login: FC = () => {
   }
 
   return (
-    <Layout variant="Center">
+    <Layout disableBreadcrumbs variant="Center">
       <div className={classes.Login}>
-        <h2 className={cn(classes.Title, 'title')}>Accedi</h2>
+        <h1 className={cn(classes.Title, 'title')}>Accedi</h1>
 
         <form className={classes.Form} autoComplete="off">
           <div className={classes.InputWrapper}>

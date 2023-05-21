@@ -86,7 +86,7 @@ export const SNEAKERS: IProductSneaker[] = [
   },
   {
     image: 'sneakers3',
-    title: 'Jordan-1-MidJordan-1-Retro-High-OG-Atmosphere-(W)',
+    title: 'Jordan-1-Retro-High-OG-Atmosphere-(W)',
     price: '198',
     sizes,
   },

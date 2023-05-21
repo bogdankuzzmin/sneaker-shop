@@ -2,16 +2,15 @@ import React from 'react';
 import { useParams } from 'react-router';
 
 import Layout from '@components/Layout';
-import Button from '@components/UI/Button'
-import Collapse from '@components/Collapse'
+import Button from '@components/UI/Button';
+import Collapse from '@components/Collapse';
 
 import nikeBig from '@images/nike-big.png';
 import { SNEAKERS } from '@/mocs/sneakers';
 
 import { IProductSneaker } from '@components/ProductList/types';
 import classes from './ProductDescription.module.scss';
-import Breadcrumbs from '@components/Breadcrumbs'
-import NotFound from '@pages/NotFound'
+import NotFound from '@pages/NotFound';
 
 const ProductDescription = () => {
   const { title: titleParam } = useParams();
@@ -20,7 +19,7 @@ const ProductDescription = () => {
 
   if (!sneaker) return (
     <>
-      <Layout variant="Center">
+      <Layout disableBreadcrumbs variant="Center">
         <NotFound />
       </Layout>
     </>
@@ -28,8 +27,6 @@ const ProductDescription = () => {
 
   return (
     <Layout>
-      <Breadcrumbs />
-
       <div className={classes.ProductDescription}>
         <div className={classes.LeftColumn}>
           <img src={nikeBig} alt="Sneakers photo" />
@@ -51,37 +48,33 @@ const ProductDescription = () => {
 
           <Collapse title="Dettagli prodotto">
             <div className={classes.Info}>
-              <div className={classes.InfoLeftColumn}>
-                <div className={classes.InfoColumnBlock}>
-                  <h4 className={classes.InfoTitle}>Prezzo retail</h4>
-                  <span className={classes.InfoDescription}>119€</span>
-                </div>
-
-                <div className={classes.InfoColumnBlock}>
-                  <h4 className={classes.InfoTitle}>ID Prodotto</h4>
-                  <span className={classes.InfoDescription}>315122-111/CW2288-111</span>
-                </div>
+              <div>
+                <h4 className={classes.InfoTitle}>Prezzo retail</h4>
+                <span>119€</span>
               </div>
 
-              <div className={classes.InfoRightColumn}>
-                <div className={classes.InfoColumnBlock}>
-                  <h4 className={classes.InfoTitle}>Colorway</h4>
-                  <span className={classes.InfoDescription}>White Pink Black</span>
-                </div>
-
-                <div className={classes.InfoColumnBlock}>
-                  <h4 className={classes.InfoTitle}>Data release</h4>
-                  <span className={classes.InfoDescription}>02/09/2019</span>
-                </div>
+              <div>
+                <h4 className={classes.InfoTitle}>ID Prodotto</h4>
+                <span>315122-111/CW2288-111</span>
               </div>
-            </div>
 
-            <div className={classes.InfoColumnBlock}>
-              <h4 className={classes.InfoTitle}>Descrizione prodotto</h4>
-              <span className={classes.InfoDescription}>
+              <div>
+                <h4 className={classes.InfoTitle}>Colorway</h4>
+                <span>White Pink Black</span>
+              </div>
+
+              <div>
+                <h4 className={classes.InfoTitle}>Data release</h4>
+                <span>02/09/2019</span>
+              </div>
+
+              <div className={classes.InfoFullWidth}>
+                <h4 className={classes.InfoTitle}>Descrizione prodotto</h4>
+                <span>
                   Le Air Jordan 1 High Atmosphere da donna hanno una classica struttura
                   a blocchi di colore Black Toe con una tomaia bianca e dark navy
                 </span>
+              </div>
             </div>
           </Collapse>
 

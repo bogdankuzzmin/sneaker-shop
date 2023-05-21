@@ -12,8 +12,8 @@ const Main: FC = () => {
   return (
     <Routes>
       <Route path={Paths.root} element={<Login />} />
-      <Route path={Paths.products} element={<Products />} />
-      <Route path={`${Paths.products}/:title`} element={<ProductDescription />} />
+      <Route path={Paths.esplora} element={<Products />} />
+      <Route path={`${Paths.esplora}/:title`} element={<ProductDescription />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );

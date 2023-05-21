@@ -19,7 +19,7 @@ const ProductItem: FC<IProductItemProps> = ({
 }) => {
   const navigate = useNavigate();
 
-  const clickItemHandler = () => navigate(`${Paths.products}/${title.toLowerCase()}`);
+  const clickItemHandler = () => navigate(`${Paths.esplora}/${title.toLowerCase()}`);
 
   return (
     <div className={classes.Item} onClick={clickItemHandler}>
