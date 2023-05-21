@@ -1,8 +1,6 @@
 @import "normalize";
 @import "fonts";
-@import "variables";
-@import "mixins";
-@import "animations";
+@import "utils";
 
 body {
   font-size: $font-size-base;
