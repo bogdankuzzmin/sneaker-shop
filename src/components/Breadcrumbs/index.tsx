@@ -15,17 +15,14 @@ const Breadcrumbs: FC = () => {
 
   const crumbs = pathnames
     .map((crumb, index) => {
+      const crumbName = capitalizeFirstLetter(crumb).split('-').join(' ');
       currentLink += `/${crumb}`;
 
       return (
         <li className={classes.Item} key={crumb}>
-          {pathnames.length - 1 === index ? (
-            <span>{capitalizeFirstLetter(crumb).split('-').join(' ')}</span>
-          ) : (
-            <Link to={currentLink}>
-              {capitalizeFirstLetter(crumb).split('-').join(' ')}
-            </Link>
-          )}
+          {pathnames.length - 1 === index
+            ? <span>{crumbName}</span>
+            : <Link to={currentLink}>{crumbName}</Link>}
         </li>
       );
     });
