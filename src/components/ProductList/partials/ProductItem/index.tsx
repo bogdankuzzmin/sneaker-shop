@@ -22,13 +22,13 @@ const ProductItem: FC<IProductItemProps> = ({
   const clickItemHandler = () => navigate(`${Paths.esplora}/${title.toLowerCase()}`);
 
   return (
-    <div className={classes.Item} onClick={clickItemHandler}>
+    <li className={classes.Item} onClick={clickItemHandler}>
       <img className={classes.Image} src={sneakers14} alt={title} height="120" width="158" />
 
       <span>{title.split('-').join(' ')}</span>
 
       <span className={classes.Price}>${price}€</span>
-    </div>
+    </li>
   );
 };
 

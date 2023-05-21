@@ -1,4 +1,7 @@
+@import "src/theme/utils";
+
 .List {
+  @include clearList;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 28px;
