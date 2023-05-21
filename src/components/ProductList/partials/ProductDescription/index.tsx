@@ -10,24 +10,36 @@ import { SNEAKERS } from '@/mocs/sneakers';
 
 import { IProductSneaker } from '@components/ProductList/types';
 import classes from './ProductDescription.module.scss';
+import Breadcrumbs from '@components/Breadcrumbs'
+import NotFound from '@pages/NotFound'
 
 const ProductDescription = () => {
   const { title: titleParam } = useParams();
 
-  const sneaker = SNEAKERS.find(({ title }) => title === titleParam ) as IProductSneaker;
+  const sneaker = SNEAKERS.find(({ title }) => title.toLowerCase() === titleParam?.toLowerCase() ) as IProductSneaker;
+
+  if (!sneaker) return (
+    <>
+      <Layout variant="Center">
+        <NotFound />
+      </Layout>
+    </>
+  )
 
   return (
     <Layout>
+      <Breadcrumbs />
+
       <div className={classes.ProductDescription}>
         <div className={classes.LeftColumn}>
-          <img src={nikeBig} alt="" />
+          <img src={nikeBig} alt="Sneakers photo" />
         </div>
 
         <div className={classes.RightColumn}>
-          <h2 className="title">{sneaker?.title || ''}</h2>
+          <h2 className="title">{sneaker.title.split('-').join(' ')}</h2>
 
           <div className={classes.ButtonWrapper}>
-            {sneaker.sizes && sneaker.sizes.map((item) => (
+            {sneaker.sizes.map((item) => (
               <Button className={classes.Button} variant="Secondary" disabled={!item.isInStock}>
                 <span>EU {item.size}</span>
                 <span className={classes.Price}>{item.price}€</span>

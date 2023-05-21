@@ -19,13 +19,13 @@ const ProductItem: FC<IProductItemProps> = ({
 }) => {
   const navigate = useNavigate();
 
-  const clickItemHandler = () => navigate(`${Paths.products}/${title}`);
+  const clickItemHandler = () => navigate(`${Paths.products}/${title.toLowerCase()}`);
 
   return (
     <div className={classes.Item} onClick={clickItemHandler}>
       <img className={classes.Image} src={sneakers14} alt={title} height="120" width="158" />
 
-      <span>{title}</span>
+      <span>{title.split('-').join(' ')}</span>
 
       <span className={classes.Price}>${price}€</span>
     </div>

@@ -1,0 +1,33 @@
+@import "src/theme/utils";
+
+.List {
+  @include clearList;
+  display: flex;
+}
+
+.Item {
+  position: relative;
+  margin-right: $inner-gap;
+
+  a, span {
+    color: $primary-gray;
+    font-size: $font-tiny-size;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &::after {
+    content: '›';
+    position: absolute;
+    top: 1px;
+    right: -12px;
+    color: $primary-gray;
+    font-weight: $weight-medium;
+  }
+
+  &:last-child::after {
+    display: none;
+  }
+}
