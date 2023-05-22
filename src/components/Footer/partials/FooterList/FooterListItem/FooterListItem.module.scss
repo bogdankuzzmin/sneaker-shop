@@ -1,0 +1,17 @@
+@import "src/theme/utils";
+
+.FooterListItem {
+  margin-bottom: 4px;
+
+  a {
+    font-family: $family-primary-regular;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.Icon {
+  margin-right: 8px;
+}
