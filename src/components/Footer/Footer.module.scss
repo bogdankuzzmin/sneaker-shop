@@ -1,0 +1,31 @@
+@import "src/theme/utils";
+
+.Footer {
+  background-color: $primary-white;
+
+  &Wrapepr {
+    margin: 0 auto;
+    padding: 60px;
+    width: 1220px;
+  }
+
+  &List {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 60px;
+    margin-bottom: 40px;
+  }
+
+  &Privacy {
+    a, span {
+      margin-right: 20px;
+      font-family: $family-primary-regular;
+      color: $primary-gray;
+      font-size: $font-small-size;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

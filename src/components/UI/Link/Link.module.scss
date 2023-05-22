@@ -11,3 +11,7 @@ $hover-color: lighten($primary-dark-brown, 20%);
     color: $hover-color;
   }
 }
+
+.DisableUnderline {
+  text-decoration: none;
+}

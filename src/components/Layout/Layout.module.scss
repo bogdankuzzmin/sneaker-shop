@@ -4,8 +4,8 @@
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  max-width: 1180px;
-  padding: 40px;
+  max-width: 1220px;
+  padding: 60px;
 
   &Center {
     @include flexCenter;

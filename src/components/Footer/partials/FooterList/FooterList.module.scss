@@ -1,0 +1,10 @@
+@import "src/theme/utils";
+
+.FooterListTitle {
+  font-weight: $weight-medium;
+}
+
+.FooterList {
+  @include clearList;
+  color: $primary-dark-brown;
+}
