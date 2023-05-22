@@ -40,7 +40,7 @@ const Login: FC = () => {
   }
 
   return (
-    <Layout disableBreadcrumbs variant="Center">
+    <Layout disableBreadcrumbs disableFooter variant="Center">
       <div className={classes.Login}>
         <h1 className={cn(classes.Title, 'title')}>Accedi</h1>
 
