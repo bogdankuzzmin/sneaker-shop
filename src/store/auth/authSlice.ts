@@ -39,7 +39,7 @@ export const authSlice = createSlice({
       state.error = '';
       state.isLoading = false;
     },
-    logoutError(state, { payload }) {
+    logoutError(state) {
       state.error = '';
       state.isLoading = false;
     },
