@@ -12,7 +12,7 @@ const FooterList: FC<IFooterListProps> = ({ list, title }) => (
 
     <ul className={classes.FooterList}>
       {list.map(({ name, url, isLinkExternal, Icon }) =>
-        <FooterListItem name={name} url={url} isLinkExternal={isLinkExternal} Icon={Icon} />
+        <FooterListItem key={url} name={name} url={url} isLinkExternal={isLinkExternal} Icon={Icon} />
       )}
     </ul>
   </div>
