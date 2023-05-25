@@ -8,9 +8,9 @@ import { IPrivateRouteProps } from '@components/Route/types';
 import { Paths } from '@utils/constants/routes';
 
 const PrivateRoute: FC<IPrivateRouteProps> = ({ component: Component, redirect }) => {
-  const { accessToken } = useAppSelector((state) => state.auth);
+  const { userId } = useAppSelector((state) => state.auth);
 
-  return accessToken ? <Component /> : <Navigate to={redirect ?? Paths.root} />
+  return userId ? <Component /> : <Navigate to={redirect ?? Paths.root} />
 };
 
 export default PrivateRoute;

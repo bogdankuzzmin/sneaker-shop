@@ -6,9 +6,9 @@ import { useAppSelector } from '@hooks/useRedux';
 import { Paths } from '@utils/constants/routes';
 
 const UnauthorizedRoute: FC<IPrivateRouteProps> = ({ component: Component, redirect }) => {
-  const { accessToken } = useAppSelector((state) => state.auth);
+  const { userId } = useAppSelector((state) => state.auth);
 
-  return !accessToken ? <Component /> : <Navigate to={redirect || Paths.esplora} />
+  return !userId ? <Component /> : <Navigate to={redirect || Paths.esplora} />
 };
 
 export default UnauthorizedRoute;

@@ -4,7 +4,7 @@ import { IAuthState } from '@store/auth/types';
 const initialState: IAuthState = {
   isLoading: false,
   email: '',
-  accessToken: '',
+  userId: '',
   error: '',
 }
 
@@ -18,24 +18,19 @@ export const authSlice = createSlice({
     loginSuccess(state, { payload }) {
       state.isLoading = false;
       state.email = payload.email;
-      state.accessToken = payload.accessToken;
+      state.userId = payload.userId;
       state.error = '';
     },
     loginError(state, { payload }) {
       state.isLoading = false;
       state.error = payload;
     },
-    authCheckStatus(state, { payload }) {
-      state.email = payload.email;
-      state.accessToken = payload.accessToken;
-      state.isLoading = payload.isLoading;
-    },
     logout(state) {
       state.isLoading = true;
     },
     logoutSuccess(state) {
       state.email = '';
-      state.accessToken = '';
+      state.userId = '';
       state.error = '';
       state.isLoading = false;
     },
@@ -46,5 +41,13 @@ export const authSlice = createSlice({
   },
 })
 
-export const { login, loginSuccess, loginError, authCheckStatus, logout, logoutSuccess, logoutError } = authSlice.actions;
+export const {
+  login,
+  loginSuccess,
+  loginError,
+  logout,
+  logoutSuccess,
+  logoutError,
+} = authSlice.actions;
+
 export default authSlice.reducer;
