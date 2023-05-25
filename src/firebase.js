@@ -7,11 +7,11 @@ import { getAuth } from 'firebase/auth';
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: process.env.FIREBASE_API_KEY,
-  authDomain: "sneakers-28a90.firebaseapp.com",
-  projectId: "sneakers-28a90",
-  storageBucket: "sneakers-28a90.appspot.com",
-  messagingSenderId: "848098970508",
-  appId: "1:848098970508:web:122b6e2df41df0d9f4a4a9"
+  authDomain: process.env.FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.FIREBASE_PROJECT_ID,
+  storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.FIREBASE_MESSAGIN_SENDER_ID,
+  appId: process.env.FIREBASE_APP_ID,
 };
 
 // Initialize Firebase

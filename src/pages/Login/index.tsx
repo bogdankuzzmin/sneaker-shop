@@ -4,6 +4,7 @@ import cn from 'classnames';
 import Layout from '@components/Layout';
 import Input from '@components/UI/Input';
 import Button from '@components/UI/Button';
+import Spinner from '@components/UI/Spinner';
 
 import MailIcon from '@assets/icons/mail.svg';
 import LockIcon from '@assets/icons/lock.svg';
@@ -12,15 +13,14 @@ import GoogleIcon from '@assets/icons/google.svg';
 import FacebookIcon from '@assets/icons/facebook.svg';
 import AppleIcon from '@assets/icons/apple.svg';
 
-import classes from './Login.modules.scss';
-
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '@/firebase';
+
 import { login, loginSuccess, loginError } from '@store/auth/authSlice';
 import { useAppDispatch, useAppSelector } from '@hooks/useRedux';
-import Spinner from '@components/UI/Spinner';
 
 import { IFormData } from './types';
+import classes from './Login.modules.scss';
 
 const initialState = {
   email: '',
@@ -43,7 +43,7 @@ const Login: FC = () => {
       const { user } = await signInWithEmailAndPassword(auth, formData.email, formData.password);
 
       dispatch(loginSuccess({
-        userid: user.uid,
+        userId: user.uid,
         email: user.email,
       }))
 

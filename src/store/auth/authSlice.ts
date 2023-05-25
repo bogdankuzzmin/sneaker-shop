@@ -38,6 +38,9 @@ export const authSlice = createSlice({
       state.error = '';
       state.isLoading = false;
     },
+    setLoading(state, { payload }) {
+      state.isLoading = payload;
+    }
   },
 })
 
@@ -48,6 +51,7 @@ export const {
   logout,
   logoutSuccess,
   logoutError,
+  setLoading,
 } = authSlice.actions;
 
 export default authSlice.reducer;
