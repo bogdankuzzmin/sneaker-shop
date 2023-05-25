@@ -43,7 +43,7 @@ const Login: FC = () => {
       const { user } = await signInWithEmailAndPassword(auth, formData.email, formData.password);
 
       dispatch(loginSuccess({
-        accessToken: user.accessToken,
+        userid: user.uid,
         email: user.email,
       }))
 
