@@ -7,7 +7,6 @@ import { Paths } from '@utils/constants/routes';
 
 const UnauthorizedRoute: FC<IPrivateRouteProps> = ({ component: Component, redirect }) => {
   const { userId } = useAppSelector((state) => state.auth);
-  console.log('NOT PRIVAE')
 
   return !userId ? <Component /> : <Navigate to={redirect ?? Paths.esplora} />
 };

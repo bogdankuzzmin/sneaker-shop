@@ -60,11 +60,13 @@ const sizes = [
       size: '42',
       price: '203',
       isInStock: true,
-    },{
+    },
+    {
       size: '42.5',
       price: '225',
       isInStock: true,
-    },{
+    },
+    {
       size: '43',
       price: '213',
       isInStock: true,
