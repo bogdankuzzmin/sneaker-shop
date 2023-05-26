@@ -53,10 +53,10 @@ const Main: FC = () => {
 
   return (
     <Routes>
-      <Route path="/" element={<UnauthorizedRoute component={Login} />} />
+      <Route path={Paths.root} element={<UnauthorizedRoute component={Login} />} />
       <Route path={Paths.esplora} element={<PrivateRoute component={Products} /> } />
       <Route path={`${Paths.esplora}/:title`} element={<PrivateRoute component={ProductDescription} />} />
-      <Route path="/logout" element={<PrivateRoute component={Logout} />} />
+      <Route path={Paths.logout} element={<PrivateRoute component={Logout} />} />
       <Route path="*" element={<PrivateRoute component={NotFound} />} />
     </Routes>
   );
