@@ -17,7 +17,6 @@ module.exports = {
     port: 3000,
     open: true,
     hot: true,
-    historyApiFallback: true,
   },
   entry: ['@babel/polyfill', path.resolve(__dirname, 'src', 'index.js')],
   output: {
@@ -25,7 +24,6 @@ module.exports = {
     clean: true,
     filename: '[name].[contenthash].js',
     assetModuleFilename: 'assets/[hash][ext]',
-    publicPath: '/',
   },
   plugins: [
     new HtmlWebpackPlugin({
