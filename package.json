@@ -2,8 +2,7 @@
   "name": "sneaker-shop",
   "version": "1.0.0",
   "description": "",
-  "main": "src/index.js",
-  "homepage": "/",
+  "homepage": ".",
   "scripts": {
     "start": "webpack serve",
     "build-dev": "webpack",
