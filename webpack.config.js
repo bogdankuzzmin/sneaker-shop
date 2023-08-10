@@ -17,10 +17,12 @@ module.exports = {
     port: 3000,
     open: true,
     hot: true,
+    historyApiFallback: true,
   },
-  entry: path.resolve(__dirname, 'src', 'index.js'),
+  entry: ['@babel/polyfill', path.resolve(__dirname, 'src', 'index.js')],
   output: {
     path: path.resolve(__dirname, 'build'),
+    clean: true,
     filename: '[name].[contenthash].js',
     assetModuleFilename: 'assets/[hash][ext]',
     publicPath: '/',
