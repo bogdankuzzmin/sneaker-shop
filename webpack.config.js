@@ -19,7 +19,7 @@ module.exports = {
     hot: true,
     historyApiFallback: true,
   },
-  entry: ['@babel/polyfill', path.resolve(__dirname, 'src', 'index.js')],
+  entry: path.resolve(__dirname, 'src', 'index.js'),
   output: {
     path: path.resolve(__dirname, 'build'),
     clean: true,
