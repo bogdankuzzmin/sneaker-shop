@@ -12,7 +12,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <StrictMode>
     <Provider store={store}>
-      <HashRouter basename='/index.html'>
+      <HashRouter>
         <Main />
       </HashRouter>
     </Provider>
