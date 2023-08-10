@@ -1,7 +1,6 @@
 import React, { FC } from 'react';
-import {useNavigate } from 'react-router';
+import { useNavigate } from 'react-router';
 
-import sneakers14 from '@assets/images/sneakers14.png';
 import { Paths } from '@utils/constants/routes';
 
 import classes from './ProductItem.module.scss';
@@ -23,7 +22,9 @@ const ProductItem: FC<IProductItemProps> = ({
 
   return (
     <li className={classes.Item} onClick={clickItemHandler}>
-      <img className={classes.Image} src={sneakers14} alt={title} height="120" width="158" />
+      <div className={classes.Image}>
+        <img src={image} alt={title} height="120" width="158" />
+      </div>
 
       <span>{title.split('-').join(' ')}</span>
 
