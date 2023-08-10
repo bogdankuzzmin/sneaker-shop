@@ -1,4 +1,4 @@
-@import "src/theme/variables";
+@import "src/theme/utils";
 
 .ProductDescription {
   display: flex;
@@ -32,6 +32,7 @@
 }
 
 .LeftColumn {
+  @include flexCenter;
   height: 540px;
   max-height: 540px;
   min-width: 660px;
@@ -67,5 +68,10 @@
     font-weight: $weight-medium;
     text-transform: uppercase;
   }
+}
+
+.NotFound {
+  @include flexCenter;
+  height: 100%;
 }
 

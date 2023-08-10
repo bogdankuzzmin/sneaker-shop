@@ -21,6 +21,8 @@
 }
 
 .Image {
+  display: flex;
+  align-items: center;
   margin-bottom: $border-radius-big;
   height: 120px;
   width: 158px;

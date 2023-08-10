@@ -17,7 +17,7 @@ import PrivateRoute from '@components/Route/PrivateRoute';
 import UnauthorizedRoute from '@components/Route/UnauthorizedRoute';
 import Spinner from '@components/UI/Spinner';
 
-import { login, loginSuccess, loginError } from '@store/auth/authSlice';
+import { login, loginSuccess, loginError, setLoading } from '@store/auth/authSlice';
 
 import { Paths } from '@utils/constants/routes';
 
@@ -42,6 +42,8 @@ const Main: FC = () => {
       })
     } catch (error) {
       dispatch(loginError(error));
+    } finally {
+      dispatch(setLoading(false));
     }
   }, [])
 
@@ -53,10 +55,10 @@ const Main: FC = () => {
 
   return (
     <Routes>
-      <Route path="/" element={<UnauthorizedRoute component={Login} />} />
+      <Route index path={Paths.root} element={<UnauthorizedRoute component={Login} />} />
       <Route path={Paths.esplora} element={<PrivateRoute component={Products} /> } />
       <Route path={`${Paths.esplora}/:title`} element={<PrivateRoute component={ProductDescription} />} />
-      <Route path="/logout" element={<PrivateRoute component={Logout} />} />
+      <Route path={Paths.logout} element={<PrivateRoute component={Logout} />} />
       <Route path="*" element={<PrivateRoute component={NotFound} />} />
     </Routes>
   );

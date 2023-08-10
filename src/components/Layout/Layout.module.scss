@@ -1,14 +1,18 @@
 @import "src/theme/mixins";
 
+.LayoutWrapper {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  min-height: 100vh;
+}
+
 .Layout {
-  display: flex;
-  flex-direction: column;
   margin: 0 auto;
   max-width: 1220px;
+  width: 100%;
   padding: 60px;
 
   &Center {
     @include flexCenter;
-    height: 100vh;
   }
 }

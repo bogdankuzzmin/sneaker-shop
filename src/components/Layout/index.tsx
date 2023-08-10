@@ -23,17 +23,19 @@ const Layout: FC<ILayoutProps> = ({
 }) => {
   useEffect(() => void (document.title = title || 'Sneakers Shop'), [title])
 
-  return <>
-    <main className={cn(classes.Layout, classes.LayoutContainer, { [classes[`Layout${variant}`]]: variant })}>
-      {!disableBreadcrumbs && <Breadcrumbs />}
+  return (
+    <div className={classes.LayoutWrapper}>
+      <main className={cn(classes.Layout, classes.LayoutContainer, { [classes[`Layout${variant}`]]: variant })}>
+        {!disableBreadcrumbs && <Breadcrumbs />}
 
-      {title && <h1 className="title">{title}</h1>}
+        {title && <h1 className="title">{title}</h1>}
 
-      {children}
-    </main>
+        {children}
+      </main>
 
-    {!disableFooter && <Footer />}
-  </>
+      {!disableFooter && <Footer />}
+    </div>
+  );
 };
 
 export default Layout;

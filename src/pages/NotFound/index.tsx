@@ -7,16 +7,14 @@ import Link from "@components/UI/Link";
 import { Paths } from '@utils/constants/routes';
 import classes from './NotFound.module.scss';
 
-const NotFound = () => {
-  return (
-    <Layout disableBreadcrumbs variant="Center">
-      <div className={classes.NotFound}>
-        <h2 className={cn(classes.Title, 'title')}>Page was not Found!</h2>
+const NotFound = () => (
+  <Layout disableBreadcrumbs disableFooter variant="Center">
+    <div className={classes.NotFound}>
+      <h2 className={cn(classes.Title, 'title')}>Page was not Found!</h2>
 
-        <Link className={classes.Link} url={Paths.esplora}>Back to the Esplora</Link>
-      </div>
-    </Layout>
-  );
-};
+      <Link className={classes.Link} url={Paths.esplora}>Back to the Esplora</Link>
+    </div>
+  </Layout>
+);
 
 export default NotFound;
