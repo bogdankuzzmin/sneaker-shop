@@ -7,7 +7,6 @@ import Skeleton from '@components/UI/Skeleton';
 
 import classes from './ProductList.module.scss';
 
-
 const ProductList: FC = () => {
   const { data, error, isLoading } = sneakersApi.useFetchAllUsersQuery('');
 
