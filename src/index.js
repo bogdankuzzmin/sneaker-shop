@@ -14,7 +14,7 @@ root.render(
     <Provider store={store}>
       <HashRouter basename='/index.html'>
         <Main />
-      </BrowserRouter>
+      </HashRouter>
     </Provider>
   </StrictMode>
 );
