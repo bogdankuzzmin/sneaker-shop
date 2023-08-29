@@ -26,7 +26,7 @@ const initialState = {
   email: '',
   password: '',
 }
-//
+
 const Login: FC = () => {
   const [formData, setFormData] = useState<IFormData>(initialState);
 
